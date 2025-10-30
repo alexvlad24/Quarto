@@ -1,4 +1,4 @@
-export module Piece;
+export module piece;
 import <iostream>;
 namespace quarto
 {
@@ -41,21 +41,13 @@ namespace quarto
 
 		Piece& operator=(Piece&& p) noexcept = default;
 
-		Color getColor() const {
-			return m_color;
-		}
+		Color GetColor() const;
 
-		Height getHeight() const {
-			return m_height;
-		}
+		Height GetHeight() const;
 
-		Shape getShape() const {
-			return m_shape;
-		}
+		Shape GetShape() const;
 
-		Body getBody() const {
-			return m_body;
-		}
+		Body GetBody() const;
 
 	private:
 		Color m_color : 1;
@@ -65,5 +57,4 @@ namespace quarto
 
 	};
 	export std::ostream& operator<<(std::ostream& os, const Piece& piece);
-
 }
